@@ -33,7 +33,7 @@ const HomeView = () => {
     const locale = LocalizationService.strings();
     var language: string = LocalizationService.getLanguage();
     const faqs = getFaqs();
-    const iconStyle = { color: theme.palette.themePrimary, fontSize: FontSizes.size24 };
+    const iconStyle = { color: theme.palette.themePrimary };
     const homeIconStyle = { color: theme.palette.themePrimary, fontSize: FontSizes.size32 };
     const sectionCard = { minHeight: '160px', height: '100%', width: '100%', maxWidth: 'none', maxHeight: 'none', boxShadow: theme.effects.elevation8 };
     const buttonStyle = { maxWidth: '180px' };
@@ -41,6 +41,7 @@ const HomeView = () => {
     const logoFileName = 'unimi500.png';
     const logoProperties = { width: '150px', height: '150px', display: 'inline-block' };
     const wikiPic = { width: '100px', height: '100px',  marginBottom: '5px', marginLeft: 'auto', marginRight: 'auto' };
+    const logoImage = { marginLeft: 'auto', marginRight: 'auto', width: '50px', height: '50px' };
 
     const telegramGroupIcon: IIconProps = { iconName: 'Send', theme: theme };
     const wikiIcon: IIconProps = { iconName: 'Globe', theme: theme };
@@ -49,6 +50,7 @@ const HomeView = () => {
     const cdlsNumber = getCdlsLength();
     const numberStyle = { color: theme.palette.themePrimary };
     const mainCard = { minHeight: '160px', height: '100%', width: '100%', maxWidth: 'none', maxHeight: 'none', boxShadow: theme.effects.elevation8 };
+    const infoCard = { minHeight: '130px' }
 
     return (
         <Container className="home text-center">
@@ -505,42 +507,76 @@ const HomeView = () => {
 
             </div>
 
-            <div className="mb-3">
-                <div className="mb-4"><Separator><Text variant="large" styles={semibold}>{locale.homepage.section7.text}</Text></Separator></div>
+            <div className="mb-4">
+                <div className="mb-3"><Separator><Text variant="large" styles={semibold}>Perchè Telegram e non Whatsapp?</Text></Separator></div>
+
+                <div className="mb-4">
+                    <Text variant="medium">
+                        Molti studenti potrebbero chiedersi come mai abbiamo scelto Telegram come piattaforma principale per tutte le nostre attività: in quanto informatici, siamo sempre alla ricerca
+                        della soluzione migliore ad un problema, e in questo caso utilizzare Whatsapp come supporto a centinaia di gruppi (e si spera migliaia in futuro) sarebbe stato prima di tutto impraticabile
+                        da un punto di vista puramente gestionale, e seconda cosa sarebbe stato un incubo per voi studenti cercare i vari materiali e comunicare in maniera efficace.
+                    </Text>
+                </div>
 
                 <Row className="justify-content-center">
                     <Col className="mb-3" xl={3} lg={4} md={4} sm={6} xs={12}>
                         <Card tokens={cardTokens} style={mainCard} className="justify-content-center text-center">
                             <CardSection>
-                                <Icon iconName="UserOptional" style={iconStyle} />
-                                <Text variant="large" className="mt-0">
-                                    {locale.homepage.section7.card1.text1}<br />
-                                    <Text variant="xLarge" style={numberStyle}>2.000</Text> <br />
-                                    {locale.homepage.section7.card1.text2}
+                                <div className="justify-content-center">
+                                    <Image id="logo" src={process.env.PUBLIC_URL + "/other/telegram-icon-compress-min.png"} style={logoImage} />
+                                </div>
+                                <Text variant="medium" styles={semibold}>
+                                    Vantaggi di <Link href="https://telegram.org/" target="_blank">Telegram</Link>
                                 </Text>
                             </CardSection>
                         </Card>
                     </Col>
                     <Col className="mb-3" xl={3} lg={4} md={4} sm={6} xs={12}>
-                        <Card tokens={cardTokens} style={mainCard} className="justify-content-center text-center">
+                        <div className="mt-3" style={{ textAlign: 'left', marginLeft: 50 }}>
+                            <Text variant="small">
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Gestione della memoria<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Sicurezza<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Multi-piattaforma<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Disponibilità dei canali<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Uso degli username<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Privacy<br />
+                            </Text>
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+
+            <div className="mb-3">
+                <div className="mb-4"><Separator><Text variant="large" styles={semibold}>{locale.homepage.section7.text}</Text></Separator></div>
+
+                <Row className="justify-content-center">
+                    <Col className="mb-3" xl={3} lg={4} md={4} sm={6} xs={12}>
+                        <Card tokens={cardTokens} style={infoCard} className="justify-content-center text-center">
                             <CardSection>
-                                <Icon iconName="PeopleAlert" style={iconStyle} />
+                                
                                 <Text variant="large" className="mt-0">
-                                    {locale.homepage.section7.card2.text1}<br />
-                                    <Text variant="xLarge" style={numberStyle}>{groupsNumber}</Text> <br />
-                                    {locale.homepage.section7.card2.text2}
+                                    <Icon iconName="UserOptional" style={iconStyle} /> {locale.homepage.section7.card1.text1}<br />
+                                    <Text variant="xLarge" style={numberStyle}>2.000</Text> {locale.homepage.section7.card1.text2}
                                 </Text>
                             </CardSection>
                         </Card>
                     </Col>
                     <Col className="mb-3" xl={3} lg={4} md={4} sm={6} xs={12}>
-                        <Card tokens={cardTokens} style={mainCard} className="justify-content-center text-center">
+                        <Card tokens={cardTokens} style={infoCard} className="justify-content-center text-center">
                             <CardSection>
-                                <Icon iconName="CityNext" style={iconStyle} />
                                 <Text variant="large" className="mt-0">
-                                    {locale.homepage.section7.card3.text1}<br />
-                                    <Text variant="xLarge" style={numberStyle}>{cdlsNumber}</Text> <br />
-                                    {locale.homepage.section7.card3.text2}
+                                    <Icon iconName="PeopleAlert" style={iconStyle} /> {locale.homepage.section7.card2.text1}<br />
+                                    <Text variant="xLarge" style={numberStyle}>{groupsNumber}</Text> {locale.homepage.section7.card2.text2}
+                                </Text>
+                            </CardSection>
+                        </Card>
+                    </Col>
+                    <Col className="mb-3" xl={3} lg={4} md={4} sm={6} xs={12}>
+                        <Card tokens={cardTokens} style={infoCard} className="justify-content-center text-center">
+                            <CardSection>
+                                <Text variant="large" className="mt-0">
+                                    <Icon iconName="CityNext" style={iconStyle} /> {locale.homepage.section7.card3.text1}<br />
+                                    <Text variant="xLarge" style={numberStyle}>{cdlsNumber}</Text> {locale.homepage.section7.card3.text2}
                                 </Text>
                             </CardSection>
                         </Card>
