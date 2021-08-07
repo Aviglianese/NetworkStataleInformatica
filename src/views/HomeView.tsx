@@ -532,14 +532,15 @@ const HomeView = () => {
                         </Card>
                     </Col>
                     <Col className="mb-3" xl={3} lg={4} md={4} sm={6} xs={12}>
-                        <div className="mt-3" style={{ textAlign: 'left', marginLeft: 50 }}>
+                        <div className="mt-2" style={{ textAlign: 'left', marginLeft: 50 }}>
                             <Text variant="small">
-                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Gestione della memoria<br />
-                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Sicurezza<br />
-                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Multi-piattaforma<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Nessuna limitazione sull'invio di file<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Gruppi giganteschi<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Maggiore sicurezza<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Maggiore privacy<br />
+                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Accesso da qualunque dispositivo<br />
                                 <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Disponibilità dei canali<br />
                                 <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Uso degli username<br />
-                                <Icon iconName="ChevronRightSmall" style={{ color: theme.palette.themePrimary }} /> Privacy<br />
                             </Text>
                         </div>
                     </Col>
