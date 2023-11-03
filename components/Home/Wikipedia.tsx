@@ -25,8 +25,7 @@ const Wiki = () => {
                     <Col lg={4} className="text-center mb-4 mb-lg-0">
                         <Image 
                             src={'/images/home/4.png'} 
-                            alt="StudentiUniMi Wikipedia"                             
-                            objectFit={'contain'}
+                            alt="StudentiUniMi Wikipedia"  
                             width={250}
                             height={187} 
                         />

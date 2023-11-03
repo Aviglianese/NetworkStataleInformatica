@@ -58,7 +58,6 @@ const GroupTypes = (props: Props) => {
                                     <Image 
                                         src={g.image} 
                                         alt={g.name[language]} 
-                                        objectFit={'contain'}
                                         width={120}
                                         height={100}
                                     />

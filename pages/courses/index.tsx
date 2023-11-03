@@ -11,7 +11,7 @@ import { NextSeo } from 'next-seo';
 import { LocalizedField } from "models/Models";
 import * as Scroll from 'react-scroll';
 import * as animationData from '../../components/Courses/Lottie/128040-searching.json';
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import LocalizationService from "../../services/LocalizationService";
 import JsxParser from "react-jsx-parser";
 import Marquee from "react-fast-marquee";
@@ -292,7 +292,6 @@ const Courses = () => {
                         <Image 
                             src={'/images/message/error.png'} 
                             alt="Server error" 
-                            objectFit={'contain'}
                             width={250}
                             height={250} 
                         />

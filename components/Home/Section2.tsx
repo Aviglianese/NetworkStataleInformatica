@@ -27,7 +27,6 @@ const SecondSection = () => {
                         <Image 
                             src={'/images/home/2.png'} 
                             alt="Network main redirects" 
-                            objectFit={'contain'}
                             width={280}
                             height={210}
                         />

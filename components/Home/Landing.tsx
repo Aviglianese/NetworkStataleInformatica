@@ -26,7 +26,6 @@ const Landing = (props: Props) => {
                                 id="logo" 
                                 src={'/logo/unimi500.png'} 
                                 alt='Network logo'
-                                objectFit={'contain'}
                                 width={200}
                                 height={200} 
                             />

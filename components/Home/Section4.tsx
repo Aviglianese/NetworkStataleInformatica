@@ -26,7 +26,6 @@ const FourthSection = () => {
                         <Image 
                             src={'/images/home/5_1.png'} 
                             alt="Representatives" 
-                            objectFit={'contain'}
                             width={170}
                             height={160} 
                         />
@@ -49,7 +48,6 @@ const FourthSection = () => {
                         <Image 
                             src={'/images/home/5_2.png'} 
                             alt="Administrators" 
-                            objectFit={'contain'}
                             width={170}
                             height={160} 
                         />

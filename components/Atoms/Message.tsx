@@ -22,7 +22,6 @@ const Message = (props: Props) => {
                     id="not-found" 
                     alt="Not found" 
                     src={'/images/message/not-found.png'} 
-                    objectFit={'contain'}
                     width={175}
                     height={175} 
                 />

@@ -54,7 +54,6 @@ const FirstSection = () => {
                                 <Image 
                                     src={'/images/home/c1.png'} 
                                     alt="Degree groups"
-                                    objectFit={'contain'}
                                     width={165}
                                     height={165}
                                 />
@@ -96,7 +95,6 @@ const FirstSection = () => {
                                 <Image 
                                     src={'/images/home/c2.png'} 
                                     alt="General groups"
-                                    objectFit={'contain'}
                                     width={165}
                                     height={165} 
                                 />
@@ -138,7 +136,6 @@ const FirstSection = () => {
                                 <Image 
                                     src={'/images/home/c3.png'} 
                                     alt="Telematic services"
-                                    objectFit={'contain'}
                                     width={165}
                                     height={165} 
                                 />

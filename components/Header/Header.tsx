@@ -55,7 +55,6 @@ const Header = () => {
                     id="logo"
                     alt="Logo"
                     src={'/logo/' + logoFileName}
-                    objectFit={'contain'}
                     width={25}
                     height={25} 
                   />

@@ -25,7 +25,6 @@ const FourOhFour = () => {
                                 id="not-found" 
                                 alt="Not found" 
                                 src={'/images/message/not-found.png'} 
-                                objectFit={'contain'}
                                 width={250}
                                 height={250} 
                             />

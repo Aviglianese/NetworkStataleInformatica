@@ -42,7 +42,6 @@ const UnimiaStudentiUnimi = () => {
                         <Image 
                             src={'/images/home/3.png'} 
                             alt="Unimia redirects"
-                            objectFit={'contain'}
                             width={256}
                             height={192} 
                         />

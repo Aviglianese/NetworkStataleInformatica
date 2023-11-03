@@ -4,7 +4,7 @@ import { bold, semibold } from '../services/Fonts';
 import { NextSeo } from 'next-seo';
 import { useContext } from 'react';
 import { preventDefault, preventVisibleHref } from 'services/Utils';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { getExtraGroups } from 'services/Requests';
 import { ExtraGroup, ExtraGroups } from 'models/Models';
 import GroupsList, { GroupsType } from '../components/Groups/Groups';
@@ -19,7 +19,7 @@ interface Props {
     extraGrousError: boolean
 };
 
-const Groups = (props: Props) => {
+const Groups = (props: Props): InferGetServerSidePropsType<typeof getServerSideProps> => {
     var theme = useTheme();
     const locale = LocalizationService.strings();
     var language: string = LocalizationService.getLanguage() as string;

@@ -5,7 +5,7 @@ import { Text, Icon, Dropdown, IDropdownOption, useTheme, PrimaryButton, Separat
 import { getRepresentatives, getDepartments, getUniversityLinks } from '../services/Requests'
 import { Department, LocalizedField, Representative } from '../models/Models';
 import { bold, semibold } from "../services/Fonts";
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import * as lottieMap from '../components/University/Lottie/47956-area-map.json';
 import * as lottieGraduations from '../components/University/Lottie/45535-girl-meditating.json';
 import Col from 'react-bootstrap/Col';

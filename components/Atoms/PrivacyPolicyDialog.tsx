@@ -36,7 +36,6 @@ const PrivacyPolicyDialog = () => {
                     <Image 
                         src={'/images/privacy_policy.png'} 
                         alt="Privacy policy" 
-                        objectFit={'contain'}
                         width={250}
                         height={176} 
                     />

@@ -3,7 +3,7 @@ import { semibold } from '../../services/Fonts';
 import { useState, useEffect, useContext } from 'react';
 import { useCookies } from 'react-cookie';
 import { addDays } from 'services/Utils';
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import * as lottieLocalization from './Lottie/PSa9MuR7v2.json';
 import GlobalContext from 'services/GlobalContext';
 

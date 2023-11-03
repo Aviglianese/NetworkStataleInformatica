@@ -42,7 +42,6 @@ const ErrorMessage = (props: Props) => {
                     id="not-found" 
                     alt="Not found" 
                     src={'/images/message/error.png'} 
-                    objectFit={'contain'}
                     width={250}
                     height={250} 
                 />

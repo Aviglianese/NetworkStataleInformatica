@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, DefaultButton, IIconProps, useTheme, TooltipDelay, TooltipHost, DirectionalHint } from '@fluentui/react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { VerboseDegree, CourseDegree, Admin } from "../../models/Models";
 import { Container } from 'react-bootstrap';
 import { getCourses, getDegreeInformations, getVerboseDegreeBySlug, getDegreeAdmins } from '../../services/Requests';
@@ -37,7 +37,7 @@ interface Props {
     }
 };
 
-const Course = (props: Props) => {
+const Course = (props: Props): InferGetServerSidePropsType<typeof getServerSideProps> => {
     var theme = useTheme();
     const router = useRouter();
     const { slug } = router.query;
@@ -216,7 +216,7 @@ const Course = (props: Props) => {
     );
 };
 
-export const getServerSideProps: GetServerSideProps = async ( { params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     let errors = { degree: false, courses: false, admins: false, informations: false };
 
     const degreeSlug = params!.slug as unknown as string;
