@@ -8,23 +8,42 @@ stylesheet.setConfig({
     namespace: 'server'
 });
 
-export default class MyDocument extends Document {
+export default class MyDocument extends Document<{ styleTags: string }> {
     static async getInitialProps(ctx: DocumentContext) {
+        const stylesheet = Stylesheet.getInstance();
+
+        stylesheet.setConfig({
+            injectionMode: InjectionMode.none,
+            namespace: 'server',
+        });
+
         stylesheet.reset();
         resetIds();
+
+        const originalRenderPage = ctx.renderPage;
+
+        ctx.renderPage = () =>
+            originalRenderPage({
+                enhanceApp: (App) => (props) => <App {...props} />,
+            });
 
         const initialProps = await Document.getInitialProps(ctx);
 
         return {
             ...initialProps,
-            styles: [ initialProps.styles, <style key="fluentui-css" dangerouslySetInnerHTML={{ __html: stylesheet.getRules(true) }} /> ]
-        }
-    };
+            styleTags: stylesheet.getRules(true),
+        };
+    }
 
     render() {
         return (
             <Html prefix="og: http://ogp.me/ns#" lang={"it"} translate="no">
-                <Head />
+                <Head>
+                    <style
+                        type="text/css"
+                        dangerouslySetInnerHTML={{ __html: this.props.styleTags }}
+                    />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />

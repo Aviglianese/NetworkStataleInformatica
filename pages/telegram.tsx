@@ -3,11 +3,12 @@ import { DefaultButton, DirectionalHint, IIconProps, Icon, Separator, Text, Tool
 import { NextSeo } from 'next-seo';
 import { bold, semibold } from 'services/Fonts';
 import { CSSProperties } from 'react';
+import { NextPage } from 'next';
 import LocalizationService from 'services/LocalizationService';
 import router from 'next/router';
 import GroupTypes from 'components/Atoms/GroupTypes';
 
-const Telegram = () => {
+const Telegram: NextPage = () => {
     var theme = useTheme();
     const locale = LocalizationService.strings();
     var language: string | undefined = LocalizationService.getLanguage();

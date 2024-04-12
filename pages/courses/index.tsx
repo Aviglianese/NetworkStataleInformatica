@@ -9,6 +9,7 @@ import { ISuggestionItem } from '../../components/Courses/Autocomplete_types';
 import { useBoolean } from "@fluentui/react-hooks";
 import { NextSeo } from 'next-seo';
 import { LocalizedField } from "models/Models";
+import { NextPage } from "next";
 import * as Scroll from 'react-scroll';
 import * as animationData from '../../components/Courses/Lottie/128040-searching.json';
 import Lottie from 'lottie-react';
@@ -20,7 +21,7 @@ import DegreesResult from "components/Courses/DegreesResult";
 import GroupTypes from "components/Atoms/GroupTypes";
 import Image from 'next/image';
 
-const Courses = () => {
+const Courses: NextPage = () => {
     var theme = useTheme();
     const locale = LocalizationService.strings();
     var language: string | undefined = LocalizationService.getLanguage();

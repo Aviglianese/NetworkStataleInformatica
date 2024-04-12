@@ -1,10 +1,11 @@
 import { Container } from 'react-bootstrap';
 import { DefaultButton, PrimaryButton, Text, useTheme } from '@fluentui/react';
 import { NextSeo } from 'next-seo';
+import { NextPage } from 'next';
 import Image from 'next/image';
 import LocalizationService from 'services/LocalizationService';
 
-const FiveHundred = () => {
+const FiveHundred: NextPage = () => {
     var theme = useTheme();
     const locale = LocalizationService.strings();
     var language: string | undefined = LocalizationService.getLanguage();

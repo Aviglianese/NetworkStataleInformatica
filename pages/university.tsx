@@ -8,6 +8,7 @@ import { bold, semibold } from "../services/Fonts";
 import Lottie from 'lottie-react';
 import * as lottieMap from '../components/University/Lottie/47956-area-map.json';
 import * as lottieGraduations from '../components/University/Lottie/45535-girl-meditating.json';
+import { NextPage } from "next";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import LocalizationService from "../services/LocalizationService";
@@ -18,7 +19,7 @@ import ItemsGroup, { Item } from "components/Atoms/ItemsGroup";
 import JsxParser from "react-jsx-parser";
 import UniversityLink from "models/UniversityLink";
 
-const University = () => {
+const University: NextPage = () => {
     var theme = useTheme();
     let didMount = useRef(false);
     const locale = LocalizationService.strings();

@@ -18,13 +18,8 @@
    ```sh
    NEXT_PUBLIC_API_URL="http://localhost:8010/proxy"
    ```
-   
-2. Install `local-cors-proxy` globally
-   ```sh
-   npm install -g local-cors-proxy
-   ```
 
-3. Run the development server:
+2. Run the development server:
 
    ```sh
    npm run dev

@@ -1,13 +1,14 @@
-import React, { CSSProperties, useContext } from "react";
+import { CSSProperties, useContext } from "react";
 import { Text, Link, Icon, useTheme } from '@fluentui/react';
 import { Container } from 'react-bootstrap';
 import { bold, semibold } from '../services/Fonts';
 import { NextSeo } from 'next-seo';
+import { NextPage } from "next";
 import LocalizationService from "../services/LocalizationService";
 import JsxParser from 'react-jsx-parser';
 import GlobalContext from "services/GlobalContext";
 
-const Rules = () => {
+const Rules: NextPage = () => {
     const theme = useTheme();
     const locale = LocalizationService.strings();
     var language: string | undefined = LocalizationService.getLanguage();

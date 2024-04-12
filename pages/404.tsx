@@ -1,9 +1,10 @@
 import { Container } from 'react-bootstrap';
 import { DefaultButton, PrimaryButton, Text, useTheme } from '@fluentui/react';
+import { NextPage } from 'next';
 import LocalizationService from 'services/LocalizationService';
 import Image from 'next/image';
 
-const FourOhFour = () => {
+const FourOhFour: NextPage = () => {
     var theme = useTheme();
     const locale = LocalizationService.strings();
 

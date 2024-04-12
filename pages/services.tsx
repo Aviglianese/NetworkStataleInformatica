@@ -10,9 +10,10 @@ import { Card, ICardTokens } from '@fluentui/react-cards';
 import { bold, semibold } from '../services/Fonts';
 import { getRedirects, getGuides, getTools } from '../services/Requests';
 import { preventDefault, preventVisibleHref } from 'services/Utils';
+import { NextPage } from 'next';
 import JsxParser from 'react-jsx-parser';
 
-const Services = () => {
+const Services: NextPage = () => {
     var theme = useTheme();
     const locale = LocalizationService.strings();
     var language: string | undefined = LocalizationService.getLanguage();

@@ -20,33 +20,14 @@ const Homepage = () => {
     const [degrees, setDegrees] = useState<Array<string>>([]);
 
     const getDegrees = useCallback(async () => {
-        setDegrees([
-            'informatica',
-            'fisica',
-            'informatica musicale',
-            'matematica',
-            'informatica per la comunicazione digitale',
-            'bioinformatics',
-            'sicurezza informatica',
-            "infermieristica",
-            "scienze delle professioni sanitarie tecniche diagnostiche",
-            "scienze chimiche",
-            "scienze della produzione e protezione delle piante",
-            "medical biotechnology and molecular medicine",
-            "international politics, law and economics",
-            "finance and economics (mef)",
-            "infermieristica pediatrica",
-            "scienza, tecnica e didattica dello sport",
-            "scienze internazionali e istituzioni europee (sie)",
-            "scienze dei servizi giuridici",
-            "international politics, law and economics"
-        ]);
+        setDegrees(defaultDegrees);
 
         setIsLoadingDegrees(true);
         
         const stringDegreesResult = await getStringDegrees();
 
-        setDegrees(stringDegreesResult.value ?? []);
+        if (stringDegreesResult.value)
+            setDegrees(stringDegreesResult.value);
         
         setIsLoadingDegrees(false);
     }, [setDegrees]);
@@ -109,3 +90,25 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+const defaultDegrees = [
+    'informatica',
+    'fisica',
+    'informatica musicale',
+    'matematica',
+    'informatica per la comunicazione digitale',
+    'bioinformatics',
+    'sicurezza informatica',
+    "infermieristica",
+    "scienze delle professioni sanitarie tecniche diagnostiche",
+    "scienze chimiche",
+    "scienze della produzione e protezione delle piante",
+    "medical biotechnology and molecular medicine",
+    "international politics, law and economics",
+    "finance and economics (mef)",
+    "infermieristica pediatrica",
+    "scienza, tecnica e didattica dello sport",
+    "scienze internazionali e istituzioni europee (sie)",
+    "scienze dei servizi giuridici",
+    "international politics, law and economics"
+];
